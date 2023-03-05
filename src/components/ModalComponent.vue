@@ -97,7 +97,7 @@ export default {
 @media (max-width:320px){
     .modal-total{
         width: 100%;
-        height: 55%;
+        height: 60%;
        
     }
     .modal {
@@ -111,7 +111,7 @@ export default {
     
 }
 .modal-title2{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -133,13 +133,14 @@ export default {
 }
 .modal-image{
    
-    width: 70%;
+    width: 40%;
+    height: 80%;
     background-color: black;
 
 }
 .image-2{
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 .remover{
     font-size: 17px;
@@ -171,7 +172,7 @@ export default {
     
 }
 .modal-title2{
-    margin-top: 21px;
+    margin-top: 12px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -193,7 +194,8 @@ export default {
 }
 .modal-image{
    
-    width: 70%;
+    width: 40%;
+    height: 80%;
     
 
 }

@@ -69,7 +69,8 @@ export default {
         return {
             quantidade: 1,
             total: 0,
-            totalItem: 0
+            totalItem: 0,
+            itemsCart:[]
         }
     },
     props: {
@@ -85,12 +86,16 @@ export default {
     },
 
     methods: {
-        ...mapActions(['getCartItems']),
+        ...mapActions(['getCartItems', 'setQtd']),
         close() {
             this.$emit("close");
         },
         aumentar() {
-            this.quantidade++;
+            console.log(this.cart)
+            this.quantidade++
+            this.itemsCart = this.cart
+            this.itemsCart.qtd = this.quantidade
+            this.setQtd(this.itemsCart)
         },
         diminuir() {
             if (this.quantidade === 1) {

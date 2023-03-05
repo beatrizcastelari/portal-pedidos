@@ -12,12 +12,12 @@
             <div class="flex mt-3 cursor-pointer" v-for="pizza in pizzaPromocao" :key="pizza.id">
                 <img class="foto h-16 md:h-44 lg:h-48" :src="require(`../${pizza.img}`)" alt="">
                 
-                <div class="ml-3 xl:ml-10">
+                <div class="ml-3 xl:ml-10" @click="openModal(pizza)">
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
                     <p class="price font-semibold">{{ pizza.price }}</p>
                 </div>
-               <img class="w-5 h-5 ml-6 mt-6" src="../assets/mais.png" alt="" @click="openModal(pizza)">
+              
             </div>
             
             <div class="font-semibold  mt-6">
@@ -27,14 +27,12 @@
             <div class="flex mt-3 cursor-pointer" v-for="pizza in pizzaNormal" :key="pizza.id">
 
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
-                <div class="ml-3 xl:ml-10">
+                <div class="ml-3 xl:ml-10" @click="openModal(pizza)" >
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
                     <p class="price font-semibold">{{ pizza.price }}</p>
                 </div>
-                <div class="ml-5">
-                <img class="w-5 h-5  mt-6" src="../assets/mais.png" alt="" @click="openModal(pizza)">
-            </div>
+                
             </div>
         </div>
         </div>
@@ -45,12 +43,12 @@
             <div class="flex mt-3 cursor-pointer" v-for="pizza in pizzaDoce" :key="pizza.id">
 
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
-                <div class="ml-3 xl:ml-10">
+                <div class="ml-3 xl:ml-10" @click="openModal(pizza)">
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
                     <p class="price font-semibold">{{ pizza.price }}</p>
                 </div>
-                <img class="w-5 h-5 ml-6 mt-6" src="../assets/mais.png" alt="" @click="openModal(pizza)">
+               
             </div>
         </div>
     </div>

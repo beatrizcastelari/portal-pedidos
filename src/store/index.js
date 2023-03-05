@@ -31,11 +31,20 @@ export default createStore({
           qtd: item.qtd
         })
       }
+    },
+    setQtd(state, qtd) {
+      console.log(qtd)
+      state.cart = qtd
+      console.log(state.cart)
     }
   },
   actions: {
     getCartItems({ commit },  item) {
       commit('setCart', item)
+    },
+    
+    setQtd({ commit }, item) {
+      commit('setQtd', item)
     }
   },
   modules: {
