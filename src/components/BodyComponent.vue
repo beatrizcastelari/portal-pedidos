@@ -168,7 +168,7 @@ export default {
     }
 
     .foto {
-        width: 100%;
+        width: 250px;
     }
 
     .description {
