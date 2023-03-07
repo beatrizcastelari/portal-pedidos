@@ -102,7 +102,8 @@ export default {
 <style>
 @media(max-width:450px) {
     .foto {
-        width: 100%;
+        width: 25%;
+
     }
 
     .container {
@@ -164,11 +165,10 @@ export default {
 @media (min-width:1440px) {
     .title {
         font-size: 30px;
-
     }
 
     .foto {
-        width: 25%;
+        width: 100%;
     }
 
     .description {
