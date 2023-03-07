@@ -102,8 +102,7 @@ export default {
 <style>
 @media(max-width:450px) {
     .foto {
-        width: 25%;
-
+        width: 100%;
     }
 
     .container {
