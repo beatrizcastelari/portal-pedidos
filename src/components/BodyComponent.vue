@@ -9,7 +9,7 @@
             <h1 class="title"> PROMOÇÃO</h1>
         </div>
         <div>
-            <div class="flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaPromocao" :key="pizza.id">
+            <div class="foto-container flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaPromocao" :key="pizza.id">
                 <img class="foto h-16 md:h-44 lg:h-48" :src="require(`../${pizza.img}`)" alt="">
                 
                 <div class="ml-3 xl:ml-10" @click="openModal(pizza)">
@@ -24,7 +24,7 @@
             <h1 class="title"> Pizza</h1>
         </div>
         <div>
-            <div class="flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaNormal" :key="pizza.id">
+            <div class="foto-container flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaNormal" :key="pizza.id">
 
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
                 <div class="ml-3 xl:ml-10" @click="openModal(pizza)" >
