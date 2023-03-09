@@ -168,7 +168,7 @@ export default {
         font-size: 30px;
     }
     .foto-container{
-        width: 45%;
+        width: 60%;
         border: 2px solid #000;
     }
     .foto{
