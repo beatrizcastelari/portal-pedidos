@@ -41,8 +41,9 @@
         </div>
         <div>
             <div class="flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaDoce" :key="pizza.id">
-
+                <div class="foto-container">
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
+            </div>
                 <div class="ml-3 xl:ml-10" @click="openModal(pizza)">
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
@@ -167,7 +168,7 @@ export default {
         font-size: 30px;
     }
 
-    .foto {
+    .foto{
         width: 250px;
     }
 
