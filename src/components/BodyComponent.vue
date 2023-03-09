@@ -167,9 +167,11 @@ export default {
     .title {
         font-size: 30px;
     }
-
+    .foto-container{
+        width: 35%;
+    }
     .foto{
-        width: 250px;
+        width: 100%;
     }
 
     .description {
