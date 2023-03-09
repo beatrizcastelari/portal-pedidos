@@ -24,8 +24,8 @@
             <h1 class="title"> Pizza</h1>
         </div>
         <div>
-            <div class=" flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaNormal" :key="pizza.id">
-                <div class="foto-container">
+            <div class="foto-container flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaNormal" :key="pizza.id">
+                <div>
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
             </div>
                 <div class="ml-3 xl:ml-10" @click="openModal(pizza)" >
@@ -41,10 +41,10 @@
             <h1 class="title"> Pizza doce</h1>
         </div>
         <div>
-            <div class="flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaDoce" :key="pizza.id">
-                <div class="foto-container">
+            <div class=" foto-container flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaDoce" :key="pizza.id">
+               
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
-            </div>
+        
                 <div class="ml-3 xl:ml-10" @click="openModal(pizza)">
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
@@ -169,7 +169,7 @@ export default {
         font-size: 30px;
     }
     .foto-container{
-        width: 65%;
+        width: 60%;
         border: 2px solid #000;
     }
     .foto img{
