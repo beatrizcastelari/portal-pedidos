@@ -9,29 +9,31 @@
             <h1 class="title"> PROMOÇÃO</h1>
         </div>
         <div>
-            <div class="foto-container flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaPromocao" :key="pizza.id">
+            <div class="container-pizza pizza1">
+            <div class="foto-container flex mt-3 cursor-pointer mb-7 " v-for="pizza in pizzaPromocao" :key="pizza.id">
                 <img class="foto h-16 md:h-44 lg:h-48" :src="require(`../${pizza.img}`)" alt="">
                 
-                <div class="ml-3 xl:ml-10" @click="openModal(pizza)">
+                <div class="ml-3 xl:ml-5" @click="openModal(pizza)">
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
-                    <p class="price font-semibold">{{ pizza.price }}</p>
+                    <p class="price font-semibold">R${{ pizza.price }}</p>
                 </div>
               
             </div>
+        </div>
             
             <div class="font-semibold  mt-6">
             <h1 class="title"> Pizza</h1>
         </div>
-        <div>
-            <div class="foto-container flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaNormal" :key="pizza.id">
+        <div class="container-pizza pizza2 xl:space-x-48 ml-16 mr-12">
+            <div class="foto-container flex mt-3 cursor-pointer mb-7 " v-for="pizza in pizzaNormal" :key="pizza.id">
                 
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
         
-                <div class="ml-8 xl:ml-10" @click="openModal(pizza)" >
+                <div class="ml-8 xl:ml-5" @click="openModal(pizza)" >
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
-                    <p class="price font-semibold">{{ pizza.price }}</p>
+                    <p class="price font-semibold">R${{ pizza.price }}</p>
                 </div>
                 
             </div>
@@ -40,15 +42,15 @@
         <div class="font-semibold  mt-6">
             <h1 class="title"> Pizza doce</h1>
         </div>
-        <div>
-            <div class=" foto-container flex mt-3 cursor-pointer mb-7" v-for="pizza in pizzaDoce" :key="pizza.id">
+        <div class="container-pizza pizza3">
+            <div class=" foto-container flex mt-3 cursor-pointer mb-7  " v-for="pizza in pizzaDoce" :key="pizza.id">
                
                 <img class="foto h-16 md:h-44" :src="require(`../${pizza.img}`)" alt="">
         
-                <div class="ml-3 xl:ml-10" @click="openModal(pizza)">
+                <div class="ml-3 xl:ml-5" @click="openModal(pizza)">
                     <h3 class="font-medium description">{{ pizza.name }}</h3>
                     <p class="description2">{{ pizza.description }}</p>
-                    <p class="price font-semibold">{{ pizza.price }}</p>
+                    <p class="price font-semibold">R${{ pizza.price }}</p>
                 </div>
                
             </div>
@@ -165,11 +167,32 @@ export default {
 }
 
 @media (min-width:1440px) {
+    .container-pizza{
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        text-align: start;
+        
+    }
+    .pizza1{
+        margin-left: 15%;
+        
+    }
+   
+    .pizza3{
+        margin-left: 8%;
+        
+    }
+    
     .title {
         font-size: 30px;
+        display: flex;
+        justify-content: center;
     }
     .foto-container{
         width: 70%;
+    
+        
     
     }
     .foto img{
@@ -178,20 +201,19 @@ export default {
     }
 
     .description {
-        font-size: 30px;
+        font-size: 27px;
     }
 
     .container {
-        padding-left: 5%;
         margin-top: 60px;
     }
 
     .description2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .price{
         margin-top: 12px;
-        margin-left: 30px;
+        
         font-size: 20px;
       
     }
